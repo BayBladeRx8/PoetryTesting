@@ -6,7 +6,7 @@ build-backend = "poetry.core.masonry.api"
 packages = [{include = "slapping", from = "src"}]
 
 [project]
-name = "gdsc"
+name = "slapping"
 version = "0.1.0"
 
 
