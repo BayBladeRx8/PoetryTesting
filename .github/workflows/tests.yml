@@ -14,10 +14,10 @@ jobs:
         with:
           python-version: '3.9'
           cache: 'pip'
-      - name: Install development dependencies
-        run: pip install -r requirements_dev.txt
       - name: Install package
-        run: poetry install
+        run: |
+          poetry install
+          poetry add $(cat requirements_dev.txt)
       - name: test with poetry
         run: |
           poetry run mypy src/
