@@ -16,8 +16,9 @@ jobs:
           cache: 'pip'
       - name: Install package
         run: |
-          poetry install
           poetry add $(cat requirements_dev.txt)
+          poetry install
+
       - name: test with poetry
         run: |
           poetry run mypy src/
