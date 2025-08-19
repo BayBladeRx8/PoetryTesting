@@ -17,7 +17,7 @@ jobs:
       - name: Install development dependencies
         run: pip install -r requirements_dev.txt
       - name: Install package
-        run: pip install .
+        run: poetry install
       - name: test with poetry
         run: |
           poetry run mypy src/
