@@ -5,10 +5,19 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry]
 packages = [{include = "slapping", from = "src"}]
 
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.1"
+mypy = "^1.17.1"
+flake8 = "^3.9.2"
+pytest-cov = "^2.12.1"
+
 [project]
 name = "slapping"
 version = "0.1.0"
-
+requires-python = ">=3.9"
+dependencies = [
+    "requests (==2.26.0)"
+]
 
 [tool.pytest.ini_options]
 addopts = "--cov=slapping"
