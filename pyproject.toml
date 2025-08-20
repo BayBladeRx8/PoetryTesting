@@ -9,7 +9,6 @@ packages = [{include = "slapping", from = "src"}]
 pytest = "^8.4.1"
 mypy = "^1.17.1"
 flake8 = "^3.9.2"
-pytest-cov = "^2.12.1"
 
 [project]
 name = "slapping"
@@ -20,9 +19,8 @@ dependencies = [
 ]
 
 [tool.pytest.ini_options]
-addopts = "--cov=slapping"
 testpaths = [
-    "tests",
+    "tests"
 ]
 
 [tool.mypy]
